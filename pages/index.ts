@@ -13,6 +13,7 @@ export default function index() {
     el(
       "section",
       el("h1", "메이트 개발자 DAO"),
+      el("p", "메이트 개발자 DAO는 메이트, 이메이트, 바이어스메이트 홀더인 개발자들이 참여하는 DAO입니다.\n비영리로 운영되며 도지사운드클럽팀과는 관계가 없습니다."),
     ),
     el(
       "section",
