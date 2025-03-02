@@ -19,8 +19,8 @@ export default function index() {
       el(
         "ul",
         el("li", el("a", "내 Kaia NFT 보기 페이지", { href: "/my-kaia-nfts" })),
-        el("li", el("a", "Kaia NFT 마켓", { href: "/kaia-nft-marketplace" })),
-        el("li", el("a", "메이트 NFT 메신저", { href: "/mate-app" })),
+        //el("li", el("a", "Kaia NFT 마켓", { href: "/kaia-nft-marketplace" })),
+        //el("li", el("a", "메이트 NFT 메신저", { href: "/mate-app" })),
       ),
     ),
   );
