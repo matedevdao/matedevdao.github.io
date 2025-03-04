@@ -41,7 +41,7 @@ export default function index() {
           "li",
           el("img", { src: "/images/exchange-logo.png" }),
           el("h3", "Kaia NFT 마켓 (개발중)"),
-          el("p", "Kaia NFT를 거래합니다."),
+          el("p", "Kaia NFT 전용 완전 온체인 마켓플레이스입니다. 수수료가 없습니다."),
           el(
             "a.button",
             '<svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>',
@@ -55,7 +55,7 @@ export default function index() {
           "li",
           el("img", { src: "/images/mate-app-logo.png" }),
           el("h3", "메이트 NFT 메신저 (개발중)"),
-          el("p", "Kaia NFT를 위한 메신저입니다."),
+          el("p", "NFT 홀더들이 모여 거버넌스로 운영하는 메신저 서비스입니다."),
           el(
             "a.button",
             '<svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>',
