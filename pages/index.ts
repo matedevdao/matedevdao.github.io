@@ -20,22 +20,28 @@ export default function index() {
     ),
     el(
       "section.services",
+      el("h2", "프로젝트"),
       el(
         "ul",
         el(
           "li",
           el("img", { src: "/images/logo.png" }),
-          el("a", "내 Kaia NFT 보기 페이지", { href: "/my-kaia-nfts" }),
+          el("a", "내 Kaia NFT (개발중)", {
+            href: "/my-kaia-nfts",
+          }),
+          el("p", "내가 소유한 Kaia NFT를 확인하고 관리합니다."),
         ),
         el(
           "li",
           el("img", { src: "/images/exchange-logo.png" }),
-          el("a", "Kaia NFT 마켓", { href: "/kaia-nft-marketplace" }),
+          el("a", "Kaia NFT 마켓 (개발중)", { href: "/kaia-nft-marketplace" }),
+          el("p", "Kaia NFT를 거래합니다."),
         ),
         el(
           "li",
           el("img", { src: "/images/mate-app-logo.png" }),
-          el("a", "메이트 NFT 메신저", { href: "/mate-app" }),
+          el("a", "메이트 NFT 메신저 (개발중)", { href: "/mate-app" }),
+          el("p", "Kaia NFT를 위한 메신저입니다."),
         ),
       ),
     ),
