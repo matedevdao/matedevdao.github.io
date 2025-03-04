@@ -178,7 +178,7 @@ meter {
 }
 :root {
   --page-bg-color: #fff;
-  --paragraph-text-color: #1d1d1f;
+  --paragraph-text-color: #333d4b;
   --primary-color: #f7d602;
 }
 [data-theme="dark"] {
@@ -201,10 +201,13 @@ body {
 body {
   color: var(--paragraph-text-color);
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   container-type: inline-size;
+}
+p {
+  line-height: 1.6;
 }
 
