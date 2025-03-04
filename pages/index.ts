@@ -26,22 +26,44 @@ export default function index() {
         el(
           "li",
           el("img", { src: "/images/logo.png" }),
-          el("a", "내 Kaia NFT (개발중)", {
-            href: "/my-kaia-nfts",
-          }),
+          el("a", "내 Kaia NFT (개발중)"),
           el("p", "내가 소유한 Kaia NFT를 확인하고 관리합니다."),
+          el(
+            "a.button",
+            '<svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>',
+            {
+              href: "/my-kaia-nfts",
+              target: "_blank",
+            },
+          ),
         ),
         el(
           "li",
           el("img", { src: "/images/exchange-logo.png" }),
-          el("a", "Kaia NFT 마켓 (개발중)", { href: "/kaia-nft-marketplace" }),
+          el("h3", "Kaia NFT 마켓 (개발중)"),
           el("p", "Kaia NFT를 거래합니다."),
+          el(
+            "a.button",
+            '<svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>',
+            {
+              href: "/kaia-nft-marketplace",
+              target: "_blank",
+            },
+          ),
         ),
         el(
           "li",
           el("img", { src: "/images/mate-app-logo.png" }),
-          el("a", "메이트 NFT 메신저 (개발중)", { href: "/mate-app" }),
+          el("h3", "메이트 NFT 메신저 (개발중)"),
           el("p", "Kaia NFT를 위한 메신저입니다."),
+          el(
+            "a.button",
+            '<svg xmlns="http://www.w3.org/2000/svg" width="17" viewBox="0 -960 960 960" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>',
+            {
+              href: "/mate-app",
+              target: "_blank",
+            },
+          ),
         ),
       ),
     ),
