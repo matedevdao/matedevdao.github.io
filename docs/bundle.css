@@ -177,11 +177,13 @@ meter {
   src: url(https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzkM1eLQ.ttf) format('truetype');
 }
 :root {
+  --line-color: #eee;
   --page-bg-color: #fff;
   --paragraph-text-color: #333d4b;
   --primary-color: #f7d602;
 }
 [data-theme="dark"] {
+  --line-color: #333;
   --page-bg-color: #060505;
   --paragraph-text-color: #fff;
 }
@@ -210,27 +212,45 @@ body {
 p {
   line-height: 1.6;
 }
+/*
 button,
 a.button {
   background-color: var(--primary-color);
-  color: #000;
-  font-weight: 600;
-  width: 260px;
+  color           : #000;
+  font-weight     : 600;
+
+  width : 260px;
   height: 48px;
-  display: flex;
-  align-items: center;
+
+  display        : flex;
+  align-items    : center;
   justify-content: center;
+
   border-radius: 8px;
+
   transition: background-color 0.2s linear;
-}
-@media (pointer: fine) {
-  button:hover,
-  a.button:hover {
+
+  @media (pointer: fine) {
+    &:hover {
+      background-color: #e2c400;
+    }
+  }
+
+  &:active {
     background-color: #e2c400;
   }
 }
-button:active,
-a.button:active {
-  background-color: #e2c400;
+*/
+header {
+  border-bottom: 1px solid var(--line-color);
+  padding: 22px 30px;
+}
+header > h1 {
+  font-weight: 600;
+}
+.services img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
 }
 
