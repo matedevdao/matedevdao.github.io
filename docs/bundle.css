@@ -289,6 +289,12 @@ main {
   flex-direction: column;
   gap: 60px;
 }
+@container (width < 520px) {
+  main {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+}
 main section {
   display: flex;
   flex-direction: column;
