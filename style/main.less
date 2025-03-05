@@ -1,6 +1,10 @@
 @import "../../korean-style-common/index.less";
 
 header {
+  position        : sticky;
+  top             : 0;
+  background-color: var(--page-bg-color);
+
   border-bottom  : 1px solid var(--line-color);
   padding        : 22px 30px;
   display        : flex;
@@ -15,6 +19,23 @@ main {
   max-width: 1200px;
   margin   : 0 auto;
   padding  : 30px;
+
+  .services {
+    ul {
+      display              : grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @container (width < 800px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    img {
+      width        : 64px;
+      height       : 64px;
+      border-radius: 16px;
+    }
+  }
 }
 
 footer {
@@ -25,17 +46,9 @@ footer {
   display        : flex;
   justify-content: space-between;
   padding-bottom : 120px;
-}
 
-.services {
-  ul {
-    display              : grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  img {
-    width        : 64px;
-    height       : 64px;
-    border-radius: 16px;
+  >.social {
+    display: flex;
+    gap    : 8px;
   }
 }

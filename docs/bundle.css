@@ -1,6 +1,3 @@
-/*!******************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../korean-style-common/lib/reset.css ***!
-  \******************************************************************************************************************/
 /***
     The new CSS reset - version 1.11.2 (last updated 15.11.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -110,9 +107,6 @@ meter {
 ::-webkit-details-marker {
     display: none;
 }
-/*!**************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/less-loader/dist/cjs.js!./style/main.less ***!
-  \**************************************************************************************************************************************/
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
@@ -177,10 +171,15 @@ meter {
   src: url(https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzkM1eLQ.ttf) format('truetype');
 }
 :root {
+  --primary-color: #f7d602;
   --line-color: #eee;
   --page-bg-color: #fff;
   --paragraph-text-color: #333d4b;
-  --primary-color: #f7d602;
+  /* App Components */
+  --icon-button-bg-color: #fff;
+  --icon-button-text-color: #000;
+  --icon-button-hover-bg-color: #e9e9e9;
+  --icon-button-disabled-bg-color: rgba(255, 255, 255, 0.26);
 }
 [data-theme="dark"] {
   --line-color: #333;
@@ -212,36 +211,65 @@ body {
 p {
   line-height: 1.6;
 }
-/*
 button,
 a.button {
   background-color: var(--primary-color);
-  color           : #000;
-  font-weight     : 600;
-
-  width : 260px;
-  height: 48px;
-
-  display        : flex;
-  align-items    : center;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
-
   border-radius: 8px;
-
   transition: background-color 0.2s linear;
-
-  @media (pointer: fine) {
-    &:hover {
-      background-color: #e2c400;
-    }
-  }
-
-  &:active {
-    background-color: #e2c400;
+}
+button > .icon-container,
+a.button > .icon-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+button > .icon-container > .icon,
+a.button > .icon-container > .icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+button > .icon-container > .icon > svg,
+a.button > .icon-container > .icon > svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+button.icon,
+a.button.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--icon-button-bg-color);
+  color: var(--icon-button-text-color);
+}
+@media (pointer: fine) {
+  button.icon:hover,
+  a.button.icon:hover {
+    background-color: var(--icon-button-hover-bg-color);
   }
 }
-*/
+button.icon:active,
+a.button.icon:active {
+  background-color: var(--icon-button-hover-bg-color);
+}
+button.icon.disabled,
+a.button.icon.disabled {
+  background-color: var(--icon-button-disabled-bg-color);
+}
 header {
+  position: sticky;
+  top: 0;
+  background-color: var(--page-bg-color);
   border-bottom: 1px solid var(--line-color);
   padding: 22px 30px;
   display: flex;
@@ -255,6 +283,20 @@ main {
   margin: 0 auto;
   padding: 30px;
 }
+main .services ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@container (width < 800px) {
+  main .services ul {
+    grid-template-columns: 1fr;
+  }
+}
+main .services img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+}
 footer {
   border-top: 1px solid var(--line-color);
   max-width: 1200px;
@@ -264,13 +306,8 @@ footer {
   justify-content: space-between;
   padding-bottom: 120px;
 }
-.services ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.services img {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
+footer > .social {
+  display: flex;
+  gap: 8px;
 }
 
