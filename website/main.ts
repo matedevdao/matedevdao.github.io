@@ -1,6 +1,6 @@
-import { DomNode } from "@common-module/app";
+import { DomNode, Theme, ThemeManager } from "@common-module/app";
 import { Button, ButtonType } from "@common-module/app-components";
-import { LightModeIcon } from "@common-module/svg-icons";
+import { DarkModeIcon, LightModeIcon } from "@common-module/svg-icons";
 
 const header = new DomNode(
   document.querySelector("header") as HTMLHeadingElement,
@@ -9,6 +9,14 @@ const header = new DomNode(
 header.append(
   new Button({
     type: ButtonType.Icon,
-    icon: new LightModeIcon(),
+    icon: ThemeManager.getShowingTheme() === Theme.Dark
+      ? new LightModeIcon()
+      : new DarkModeIcon(),
+    onClick: (button) => {
+      ThemeManager.toggleTheme();
+      button.icon = ThemeManager.getShowingTheme() === Theme.Dark
+        ? new LightModeIcon()
+        : new DarkModeIcon();
+    },
   }),
 );

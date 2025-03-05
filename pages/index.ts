@@ -17,11 +17,11 @@ export default function index() {
         "section",
         el(
           "p",
-          "메이트 개발자 DAO는 메이트, 이메이트, 바이어스메이트 홀더인 개발자들이 참여하는 DAO입니다.",
+          "메이트 개발자 DAO는 메이트, 이메이트, 바이어스메이트 홀더인 개발자들이 참여하는 프로젝트 개발 DAO입니다.",
         ),
         el(
           "p.asterisk",
-          "* 비영리로 운영되며 도지사운드클럽팀과는 관계가 없습니다.",
+          "* 홀더들이 비영리로 자발적으로 참여하며, 도지사운드클럽팀과는 관계가 없음을 알립니다.",
         ),
       ),
       el(
@@ -35,7 +35,7 @@ export default function index() {
             el(
               ".info",
               el("h3", "내 Kaia NFT (개발중)"),
-              el("p", "내가 소유한 Kaia NFT를 확인하고 관리합니다."),
+              el("p", "내가 소유한 Kaia NFT를 확인하고 관리합니다.\nDynamic NFT의 경우 커스텀 기능을 제공합니다."),
             ),
             el(
               "a.button.icon",
