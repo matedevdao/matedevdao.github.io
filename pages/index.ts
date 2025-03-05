@@ -8,6 +8,7 @@ export default function index() {
         "메이트 개발자 DAO는 메이트, 이메이트, 바이어스메이트 홀더인 개발자들이 참여하는 DAO입니다. 비영리로 운영되며 도지사운드클럽팀과는 관계가 없습니다.",
       jsFiles: ["/bundle.js"],
       cssFiles: ["/bundle.css"],
+      coverImageURL: "https://matedevdao.github.io/images/logo.png",
       twitterHandle: "@matedevdao",
     },
     el("header", el("h1", "메이트 개발자 DAO")),
@@ -71,7 +72,7 @@ export default function index() {
             el("img", { src: "/images/mate-app-logo.png" }),
             el(
               ".info",
-              el("h3", "메이트 NFT 메신저 (개발중)"),
+              el("h3", "MATE NFT 메신저 (개발중)"),
               el(
                 "p",
                 "NFT 홀더들이 모여 거버넌스로 운영하는 메신저 서비스입니다.",
