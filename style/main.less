@@ -1,15 +1,38 @@
 @import "../../korean-style-common/index.less";
 
 header {
-  border-bottom: 1px solid var(--line-color);
-  padding      : 22px 30px;
+  border-bottom  : 1px solid var(--line-color);
+  padding        : 22px 30px;
+  display        : flex;
+  justify-content: space-between;
 
   >h1 {
     font-weight: 600;
   }
 }
 
+main {
+  max-width: 1200px;
+  margin   : 0 auto;
+  padding  : 30px;
+}
+
+footer {
+  border-top     : 1px solid var(--line-color);
+  max-width      : 1200px;
+  margin         : 0 auto;
+  padding        : 22px 30px;
+  display        : flex;
+  justify-content: space-between;
+  padding-bottom : 120px;
+}
+
 .services {
+  ul {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   img {
     width        : 64px;
     height       : 64px;
