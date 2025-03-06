@@ -382,6 +382,7 @@ footer {
 @container (width < 520px) {
   footer {
     padding: 20px;
+    padding-bottom: 80px;
   }
 }
 footer > .social {
